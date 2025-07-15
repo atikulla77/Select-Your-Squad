@@ -16,7 +16,6 @@ function AvailablePlayersCard(player, selectedPlayerData, setSelectedPlayerData,
   const [buttonDisabled, setButtonDisabled] = useState(false)
   const ChoosePlayer = (player) => {
     if (claimFreeCredit >= player.biddingPrice) {
-      setClaimFreeCredit(claimFreeCredit - player.biddingPrice)
       if (selectedPlayerData.some(p => p.name === player.name)) {
         alert("Player Already Taken")
       } else {
@@ -25,6 +24,7 @@ function AvailablePlayersCard(player, selectedPlayerData, setSelectedPlayerData,
         } else {
           setButtonDisabled(true)
           setSelectedPlayerData((prev) => [...prev, player]);
+          setClaimFreeCredit(claimFreeCredit - player.biddingPrice)
         }
       }
     } else {
