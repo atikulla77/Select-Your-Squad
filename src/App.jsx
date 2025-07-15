@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Navber from "./components/navber";
+import Navber from "./components/Navber";
 import Banner from "./components/Banner";
 import AvailablePlayers from "./components/AvailablePlayers";
 import ToggleNav from "./components/ToggleNav";
